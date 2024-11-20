@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile Design</title>
+    <link rel="stylesheet" href="styles2.css" />
+  </head>
+  <body>
+    <!-- Header with Hamburger Menu -->
+    <header class="mobile-header">
+      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+      <h1 class="site-title">Your Website</h1>
+    </header>
+
+    <!-- Hidden Navigation Menu -->
+    <nav id="mobile-nav" class="mobile-nav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="container">
+      <!-- Example content section -->
+      <section class="intro">
+        <h2>Welcome to Our Website</h2>
+        <p>This is a mobile-friendly design example.</p>
+      </section>
+
+      <!-- Example Image Gallery -->
+      <section class="gallery">
+        <div class="image-gallery2">
+          <img src="your-image-link.jpg" alt="Example Image" />
+          <div class="recipe-info">
+            <p class="recipe-name">Example Recipe</p>
+            <p class="recipe-author">by Example Author</p>
+            <button onclick="displayRecipeDetails()">Details</button>
+            <button onclick="editRecipe(0)">Edit</button>
+            <button onclick="deleteRecipe(0)">Delete</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Popup for File Upload -->
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h2>Upload Recipe</h2>
+        <input type="text" placeholder="Organisation Name" required />
+        <input type="text" placeholder="Food Description" required />
+        <textarea placeholder="Recipe Details"></textarea>
+        <input type="file" id="popupUploadInput" accept="image/*" />
+        <button onclick="uploadFile()">Upload</button>
+      </div>
+    </div>
+
+    <!-- Recipe Details Box -->
+    <div id="recipeDetailsBox" class="recipe-details-box">
+      <span class="close" onclick="closeRecipeDetails()">&times;</span>
+      <h3 id="recipeDetailsName"></h3>
+      <p id="recipeDetails"></p>
+    </div>
+
+    <script src="scripts2.js"></script>
+  </body>
+</html>
